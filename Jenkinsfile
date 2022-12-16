@@ -1,11 +1,8 @@
 node{
-  stage('SCM Checkout')
-  {
+  stage('SCM Checkout'){
   git 'https://github.com/meethatrik/sample-web-application'
-  }
-  
-  stage( 'Compile-Packages')
-  {
+  } 
+  stage( 'Compile-Packages'){
   sh 'mvn package'
   }
 }
