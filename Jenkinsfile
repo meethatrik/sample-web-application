@@ -3,6 +3,7 @@ node{
   git 'https://github.com/meethatrik/sample-web-application'
   } 
   stage( 'Compile-Packages'){
-  sh 'mvn package'
+    def mvnhome= tool name: 'maven-3', type: 'maven'
+    sh "${mvnhome}/ubuntu/mvn package"
   }
 }
