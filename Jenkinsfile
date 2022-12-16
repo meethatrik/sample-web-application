@@ -4,6 +4,6 @@ node{
   } 
   stage('Compile-Packages'){
     def mvnHome= tool name: 'maven-3', type: 'maven'
-    sh "${mvnHome}/usr/share/maven package"
+    sh "${mvnHome}/bin/mvn package"
   }
 }
